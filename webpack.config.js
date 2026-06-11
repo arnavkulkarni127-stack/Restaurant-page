@@ -15,6 +15,19 @@ export default {
             template: "./src/template.html",
         }),
     ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+        ],
+    },
+    devtool: "eval-source-map",
+
+    devServer: {
+        watchFiles: ["./src/template.html"],
+    },
 
 
 };
